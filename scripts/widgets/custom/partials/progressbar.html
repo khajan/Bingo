@@ -1,0 +1,8 @@
+<div class="progress">
+    <div ng-repeat="bar in ::bars track by $index"
+         class="progress-bar {{::bar.classes}}"
+         ng-style="{width: bar.value+'%'}" role="progressbar"
+         aria-valuenow="{{bar.value}}" aria-valuemin="{{::bar.min}}" aria-valuemax="{{::bar.max}}">
+        <span ng-class="{'sr-only': !$parent.options.showProgress}" ng-bind-template="{{bar.message}}"></span>
+    </div>
+</div>

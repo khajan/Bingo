@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Components</title>
+    <link rel="stylesheet" href="../thirdparty/bootstrap-3.3.4-dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../thirdparty/bootstrap-3.3.4-dist/css/bootstrap-theme.css"/>
+</head>
+<body>
+    <div ng-controller="DemoController" class="container">
+        <h3>BINgO - Bootstrap Integrated AngularJS Ornaments</h3>
+        <div class="col-lg-6">
+            <div >Labels</div>
+            <div >Form Fields</div>
+
+        </div>
+        <div class="col-lg-12">
+            <p><div bingo-progress-bar value="20"></div></p>
+            <p><div bingo-progress-bar value="45" options="options1"></div></p>
+            <p><div bingo-progress-bar value="progressValues" options="options2"></div></p>
+        </div>
+        <div class="col-lg-6">
+            <div bingo-label></div>
+            <form class="form-horizontal" name="demoForm" novalidate>
+                <div id="textField" bingo-text label="textObject.label" ng-model="textObject.value" options="textObject.options"
+                     name="firstName" ng-required="true"></div>
+                <div id="combobox" bingo-dropdown label="combo.label" ng-model="combo.selected" name="values"
+                     items="combo.items" item-label="combo.itemLabel" ng-required="true" options="combo.options"
+                        ></div>
+                <div id="checkboxField" bingo-checkbox label="checks.label" ng-model="checks.selected" name="names"
+                     items="checks.items" ng-required="true" item-label="checks.itemLabel"></div>
+                <div id="numberField" bingo-number label="numberObject.label" ng-model="numberObject.value"
+                     name="numeric" ng-required="true"></div>
+                <div id="radioField" bingo-radio label="radioObject.label" ng-model="radioObject.selected" name="radioNames"
+                     items="radioObject.items" ng-required="true"></div>
+                <div id="textAreaField" bingo-textarea label="textAreaObject.label" ng-model="textAreaObject.value" options="textAreaObject.options"
+                     name="textArea" ng-required="true"></div>
+                <div id="timeField" bingo-time label="timeObject.label" ng-model="timeObject.value" name="time" ng-required="true"></div>
+            </form>
+
+        </div>
+    </div>
+    <script type="text/javascript"
+            data-main="index.js"
+            src="../thirdparty/require-js/require.js"></script>
+</body>
+</html>

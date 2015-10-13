@@ -1,0 +1,15 @@
+<div class="dropdown" ng-attr-bingo-label='{{label? label: null}}' bingo-validation>
+    <div class="input-group">
+        <input type="text" class="form-control" aria-label="selected-choices" ng-model="selectedLabel">
+        <div class="input-group-btn">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></button>
+            <ul class="dropdown-menu dropdown-menu-right">
+                <li ng-repeat="item in ::items track by $index" ng-class="{active: $parent.selectedIndex == $index }">
+                    <a href="#" ng-click="selectItem(item, $index)">
+                        <span ng-bind-template="{{::(itemLabel? (item[itemLabel]|| '&nbsp;'): item)}}"></span>
+                    </a>
+                </li>
+            </ul>
+        </div><!-- /btn-group -->
+    </div><!-- /input-group -->
+</div><!-- /.col-lg-6 -->
